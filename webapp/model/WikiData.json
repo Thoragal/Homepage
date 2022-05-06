@@ -1,0 +1,69 @@
+{
+	"Wiki":
+	[
+		{	"id":"0005",
+			"date":"05.05.2022",
+			"title":"Deutsche Tastatur",
+			"label": [	{ "text":"123" },
+						{ "text":"12334" } ],
+			"content":
+				[
+					{	"text":"<p><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/KB_Germany.svg/450px-KB_Germany.svg.png\" alt=\"Deutsche Tastatur\" width=\"609\" height=\"203\" /></p>",
+						"image":
+							{
+								"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/KB_Germany.svg/450px-KB_Germany.svg.png",
+								"description":"Deutsche Tastatur"
+							}					}
+				]
+		},
+		{	"id":"0004",
+			"date":"02.05.2022",
+			"title":"Name von BADI bzw. User-Exit finden",
+			"content":
+				[
+					{	"text":"<ul><li>Transaktion SE24<ul><li>Objekttyp: CL_EXITHANDLER</li><li>Methode: GET_INSTANCE</li></ul></li><li>Breakpoint bei Zeile 28</li><li>Variable Exit-Name = Badi-Name</li></ul>"
+					}
+				]
+		},
+		{	"id":"0003",
+			"date":"30.11.2021",
+			"title":"SAP Gateway - Calls Backend",
+			"content":
+				[
+					{	"text": "<ul><li>Get Entity:</li></ul><p style=\"padding-left: 40px;\">/sap/opu/odata/SAP/Z_SDSR_SHOWROOM_SRV/UserDefaultsSet<span style=\"color: #ff0000;\"><strong>(Username='UserABC')</strong></span></p><ul><li>Get EntitySet:</li></ul><p style=\"padding-left: 40px;\">/sap/opu/odata/SAP/Z_SDSR_SHOWROOM_SRV/UserDefaultsSet</p><ul><li>Follow Associations:</li></ul><p style=\"padding-left: 40px;\">/sap/opu/odata/SAP/Z_SDSR_SHOWROOM_SRV/DocumentSet(DocumentId='0000722731')<span style=\"color: #ff0000;\">/<strong>Items</strong></span></p><ul><li>Use Filter:</li></ul><p style=\"padding-left: 40px;\">/sap/opu/odata/sap/Z_IFMI_SRV/PRODUCT_HIERARCHIESSet<span style=\"color: #ff0000;\"><strong>?$filter=Language eq 'EN'</strong></span></p>"
+					}
+				]
+		},
+		{	"id":"0002",
+			"date":"01.12.2021",
+			"title":"Dirty Assign",
+			"content":
+				[
+					{	"text":"<p>FIELD-SYMBOLS: &lt;var&gt; TYPE i.</p><p>ASSIGN ('(Z_TB_TEST10)GV_GLOBAL') TO &lt;var&gt;.</p><p>&lt;var&gt; = 4.</p>"
+					}
+				]
+		},
+		{	"id":"0001",
+			"date":"01.01.2021",
+			"title":"GuiXT",
+			"content":
+				[
+					{	"text":"<p>Erm&ouml;glicht Erweiterung vom SAP-GUI</p>",
+						"image":
+							{
+								"src":"images/Wiki/0003_01.png",
+								"description":"GuiXT aktivieren"
+							}
+					},
+					{	"text":"",
+						"image":
+							{
+								"src":"images/Wiki/0003_02.png",
+								"description":"GuiXT wieder sichtbar machen: CMD.exe"
+							}
+					}
+				]
+			
+		}
+		]
+}
