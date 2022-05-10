@@ -1,6 +1,33 @@
 {
 	"Wiki":
 	[
+		{	"id":"0008",
+			"date":"09.05.2022",
+			"title":"CHARM",
+			"content":
+				[
+					{	"text":"<p>Auftrag per ToC transportieren:</p><ul><li>SE10 - Aufgabe freigeben</li><li>CHARM: Reiter Transortfreigabe (Modus Bearbeiten)</li><li>Schaltfl&auml;che 'Transport von Kopien'</li><li>Ggfls. neue Aufgabe anlegen</li><li>Sichern</li></ul>"
+					}
+				]
+		},
+		{	"id":"0007",
+			"date":"09.05.2022",
+			"title":"Call Function Module in new task",
+			"content":
+				[
+					{	"text":"<p><span style=\"color: #0000ff;\">CALL FUNCTION</span> <span style=\"color: #008000;\">'FM_MODULE_1'</span></p><p><span style=\"color: #0000ff;\">STARTING NEW TASK</span> <span style=\"color: #008000;\">'NEW_TASK'</span> <span style=\"color: #0000ff;\">CALLING</span> method_1 <span style=\"color: #0000ff;\">ON END OF TASK</span></p><p><span style=\"color: #0000ff;\">EXPORTING</span> ...</p><p>&nbsp;</p><p>Notes: Importing not directly possible in FM_MODULE_1, but possible inside method_1</p><p>e.g. &nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #0000ff;\">RECEIVE</span> RESULTS <span style=\"color: #0000ff;\">FROM FUNCTION</span> <span style=\"color: #008000;\">'FM_MODULE_1'</span> <span style=\"color: #0000ff;\">IMPORTING</span> vbeln = gv_vbeln.</p><p>Notes: Use wait lv_finished = abap_true (Set lv_finished inside method_1)</p>"
+					}
+				]
+		},
+		{	"id":"0006",
+			"date":"09.05.2022",
+			"title":"Reset Buffer of Application Server",
+			"content":
+				[
+					{	"text":"<p><strong>/$SYNC - Resets all buffers of the application server</strong></p><p>/$CUA - Resets the CUA buffer of the application server</p><p>/$TAB - Resets the TABLE buffers of the application server</p><p>/$NAM - Resets the nametab buffer of the application server</p><p>/$DYN - Resets the screen buffer of the application server</p><p>/$ESM - Resets the Exp./ Imp. Shared Memory Buffer of the application server</p><p>/$PXA - Resets the Program (PXA) Buffer of the application server</p><p>/$OBJ - Resets the Shared Buffer of the application server</p>"
+					}
+				]
+		},
 		{	"id":"0005",
 			"date":"05.05.2022",
 			"title":"Deutsches Tastaturlayout",
@@ -8,12 +35,12 @@
 						{ "text":"12334" } ],
 			"content":
 				[
-					{	"text":"<p><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/KB_Germany.svg/450px-KB_Germany.svg.png\" alt=\"Deutsche Tastatur\" width=\"609\" height=\"203\" /></p>",
-						"image":
+					{	"image":
 							{
 								"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/KB_Germany.svg/450px-KB_Germany.svg.png",
 								"description":"Deutsches Tastaturlayout"
-							}					}
+							}
+					}
 				]
 		},
 		{	"id":"0004",

@@ -1958,16 +1958,22 @@
     "description": "Business Object Builder"
   },
   {
+    "type": "Transaktion",
+    "category": "Shortcut",
+    "value": "/I",
+    "description": "Close Session"
+  },
+  {
+    "type": "Transaktion",
+    "category": "Shortcut",
+    "value": "/NEX",
+    "description": "Close All Sessions (Feierabend)"
+  },
+  {
     "type": "Klasse",
     "category": "Stammdaten",
     "value": "LFA1_READ_SINGLE",
     "description": "Lieferant selektieren"
-  },
-  {
-    "type": "Klasse",
-    "category": "Entwicklung",
-    "value": "CL_SALV_RANGE_TAB_COLLECTOR",
-    "description": "Class for collecting range tables for multiple fields"
   },
   {
     "type": "Klasse",
@@ -2212,6 +2218,12 @@
   {
     "type": "Shortcut",
     "category": "SAP-GUI",
+    "value": "STRG + F3",
+    "description": "Activate"
+  },
+  {
+    "type": "Shortcut",
+    "category": "SAP-GUI",
     "value": "Umschalt + F1",
     "description": "Pretty Printer"
   },
@@ -2224,8 +2236,32 @@
   {
     "type": "Shortcut",
     "category": "SAP-GUI",
-    "value": "Umschalt F6 / F7",
+    "value": "Umschalt + F6 / F7",
     "description": "Vorheriges / Nächstes Objekt"
+  },
+  {
+    "type": "Shortcut",
+    "category": "SAP-GUI",
+    "value": "F9 / Umschalt + F9",
+    "description": "Mark everything / nothing (Menu Save Changes)"
+  },
+  {
+    "type": "Shortcut",
+    "category": "SAP-GUI",
+    "value": "STRG + Umschalt + F3",
+    "description": "Verwendungsnachweis"
+  },
+  {
+    "type": "Shortcut",
+    "category": "SAP-GUI",
+    "value": "STRG + Umschalt + F5",
+    "description": "Display Objectlist"
+  },
+  {
+    "type": "Shortcut",
+    "category": "SAP-GUI",
+    "value": "STRG + G",
+    "description": "Find Next"
   }
 ]
 }
