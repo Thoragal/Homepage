@@ -2,6 +2,17 @@
 	"Wiki":
 	[	
 		{
+			"id":"0018",
+			"date":"11.08.2022",
+			"title":"Debug deployed UI5-Application",
+			"content":
+				[
+					{
+						"text": "<ul><li>Start deployed application</li><li>Shortcut: STRG + SHIFT + ALT + P</li><li>Mark checkbox: Use debug sources -&gt; Reload application</li><li>Shortcut F12 (Debug console)</li><li>Follow path in tab Sources -&gt; sap -&gt; bc -&gt; ui5_ui5 -&gt; sap -&gt; z*</li></ul>"
+					}
+				]
+		},
+		{
 			"id":"0017",
 			"date":"03.08.2022",
 			"title":"Sorting in SAP Gateway",
