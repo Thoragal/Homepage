@@ -56,6 +56,7 @@
 		<SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop"
 					visible="true">
 			<GenericTile
+				backgroundImage="images/Home/ContactMe.jpg"
 				frameType="TwoByOne" 
 				press="onNavToContactMe">
 				<TileContent>

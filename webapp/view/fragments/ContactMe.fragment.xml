@@ -7,11 +7,6 @@
 		<content>
 			<f:SimpleForm	id="idSimpleFormContactMe" 
 							editable="true"
-							layout="ResponsiveGridLayout" 
-							labelSpanM="2" 
-							emptySpanL="2" 
-							emptySpanXL="2" 
-							emptySpanM="0" 
 							width="100%">
 <!--First name-->
 				<Label	id="idLabelContactMeFirstName"
@@ -42,11 +37,10 @@
             			rows="15" />
 		</content>
 <!--Buttons-->
-		<beginButton>
+		<Toolbar>
 			<Button id="idBtnContactMeCancel" press="onPressContactMeDialogCancel" text="{i18n>txtBtnContactMeCancel}"/>			
-		</beginButton>
-		<endButton>
+			<ToolbarSpacer/>
 			<Button id="idBtnContactMeOk" press="onPressContactMeDialogOk" text="{i18n>txtBtnContactMeOk}"/>
-		</endButton>
+		</Toolbar>
 	</Dialog>
 </core:FragmentDefinition>
