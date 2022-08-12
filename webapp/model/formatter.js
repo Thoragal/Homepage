@@ -8,11 +8,11 @@ sap.ui.define([
 		},
 		device: function(value) {
 			var result = value;
-			if (value = "1111"){
-			//	result = "XXXX"
+			if (value === "1111") {
+			//	result = "XXXX";
 			}
 			else {
-				result = "ABCD"
+				result = "ABCD";
 			}
 			return result;
 		}

@@ -23,20 +23,20 @@ sap.ui.define([
 		},
 		
 		onXingPressed: function() {
-			var XingUrl = this.getModel("MeModel").oData.General.Xing;
+			var XingUrl = this.getModel("MeModel").getData().General.Xing;
 			var URLHelper = mobileLibrary.URLHelper;
 			URLHelper.redirect( XingUrl, true);
 		},
 		
 		onLinkedInPressed: function() {
-			var LinkedInUrl = this.getModel("MeModel").oData.General.LinkedIn;
+			var LinkedInUrl = this.getModel("MeModel").getData().General.LinkedIn;
 			var URLHelper = mobileLibrary.URLHelper;
 			URLHelper.redirect( LinkedInUrl, true);
 		},
 		
 		onEmailPressed: function(){
 			var URLHelper = mobileLibrary.URLHelper;
-			var sEmail = this.getModel("MeModel").oData.General.Email;
+			var sEmail = this.getModel("MeModel").getData().General.Email;
 			var sSubject = this.getModel("i18n").getResourceBundle().getText("AboutMeRequest");
 			URLHelper.triggerEmail(sEmail, sSubject, false, false, false, true);
 		}

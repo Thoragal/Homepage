@@ -3,12 +3,13 @@ sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/m/library",
 	"sap/ui/core/routing/History",
-	"sap/ui/model/json/JSONModel"
-], function (Controller, UIComponent, mobileLibrary, History, JSONModel) {
+	"sap/ui/model/json/JSONModel",
+	"sap/ui/core/syncStyleClass"
+], function (Controller, UIComponent, mobileLibrary, History, JSONModel, syncStyleClass) {
 	"use strict";
-
+	
 	// shortcut for sap.m.URLHelper
-	var URLHelper = mobileLibrary.URLHelper;
+	//var URLHelper = mobileLibrary.URLHelper;
 
 	return Controller.extend("Homepage.Homepage.controller.BaseController", {
 		
@@ -23,6 +24,30 @@ sap.ui.define([
 		},
 		onNavToAboutMe: function (oEvent) {
 			this.getRouter().navTo("AboutMeView");
+		},
+		
+		onNavToContactMe: function (oEvent) {
+			//Dialog öffnen
+			if (!this.ContactMeDialog) {
+				this.refDateDialog = sap.ui.core.Fragment.load({
+					id: "idFragContactMeDialog",
+					name: "Homepage.Homepage.view.fragments.ContactMe",
+					controller: this
+				}).then(function (oDialog) {
+					this.ContactMeDialog = oDialog;
+					// connect dialog to the root view of this component
+					this.getView().addDependent(oDialog);
+					// forward compact/cozy style into dialog
+					//syncStyleClass(this.getView().getController().getOwnerComponent().getContentDensityClass(), this.getView(), oDialog);
+					oDialog.open();
+				}.bind(this));
+			} else {
+				this.ContactMeDialog.open();
+			}
+		},
+		
+		onPressContactMeDialogCancel: function (oEvent){
+			this.ContactMeDialog.close();
 		},
 		
 		/**

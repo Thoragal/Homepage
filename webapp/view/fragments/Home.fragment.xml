@@ -52,12 +52,12 @@
 			</GenericTile>
 		</SlideTile>
 		
-<!-- Contact AboutMe -->
+<!-- Tile ContactMe -->
 		<SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop"
-					visible="false">
+					visible="true">
 			<GenericTile
 				frameType="TwoByOne" 
-				press="onNavToAboutMe">
+				press="onNavToContactMe">
 				<TileContent>
 					<NewsContent
 						subheader="{i18n>StartTileSubheaderContactMe}" />

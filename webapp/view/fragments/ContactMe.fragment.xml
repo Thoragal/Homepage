@@ -1,0 +1,52 @@
+<core:FragmentDefinition	xmlns="sap.m" 
+							xmlns:core="sap.ui.core" 
+							xmlns:l="sap.ui.layout" 
+							xmlns:f="sap.ui.layout.form">
+	<Dialog id="idDialogContactMe" 
+			title="{i18n>idDialogContactMeTitle}">
+		<content>
+			<f:SimpleForm	id="idSimpleFormContactMe" 
+							editable="true"
+							layout="ResponsiveGridLayout" 
+							labelSpanM="2" 
+							emptySpanL="2" 
+							emptySpanXL="2" 
+							emptySpanM="0" 
+							width="100%">
+<!--First name-->
+				<Label	id="idLabelContactMeFirstName"
+						text="{i18n>lblContactMeFirstName}"
+						labelFor="idInputContactMeFirstName"/>
+				<Input	id="idInputContactMeFirstName"
+						placeholder="{i18n>PlaceholderInputContactMeFirstName}" 
+						value="{localDataModel>/DataContactMe/NameFirst}" />
+<!--Last name-->
+				<Label	id="idLabelContactMeLastName"
+						text="{i18n>lblContactMeLastName}"
+						labelFor="idInputContactMeLastName"/>
+				<Input	id="idInputContactMeLastName"
+						placeholder="{i18n>PlaceholderInputContactMeLastName}" 
+						value="{localDataModel>/DataContactMe/NameLast}" />
+<!--Email-->
+				<Label	id="idLabelContactMeEmail"
+						text="{i18n>lblContactMeEmail}"
+						labelFor="idInputContactMeEmail"/>
+				<Input	id="idInputContactMeEmail"
+						placeholder="{i18n>PlaceholderInputContactMeEmail}" 
+						value="{localDataModel>/DataContactMe/Email}" />
+			</f:SimpleForm>
+<!--MessageText-->
+            <TextArea	width="100%" 
+            			placeholder="{i18n>PlaceholderInputContactMeTextArea}" 
+            			value="{localDataModel>/DataContactMe/Text}"
+            			rows="15" />
+		</content>
+<!--Buttons-->
+		<beginButton>
+			<Button id="idBtnContactMeCancel" press="onPressContactMeDialogCancel" text="{i18n>txtBtnContactMeCancel}"/>			
+		</beginButton>
+		<endButton>
+			<Button id="idBtnContactMeOk" press="onPressContactMeDialogOk" text="{i18n>txtBtnContactMeOk}"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>
