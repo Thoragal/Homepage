@@ -7,33 +7,34 @@
 		<content>
 			<f:SimpleForm	id="idSimpleFormContactMe" 
 							editable="true"
-							width="100%">
+							width="100%"> 
 <!--First name-->
 				<Label	id="idLabelContactMeFirstName"
 						text="{i18n>lblContactMeFirstName}"
 						labelFor="idInputContactMeFirstName"/>
 				<Input	id="idInputContactMeFirstName"
-						placeholder="{i18n>PlaceholderInputContactMeFirstName}" 
-						value="{localDataModel>/DataContactMe/NameFirst}" />
+						placeholder="{i18n>PlaceholderInputContactMeFirstName}"
+	 					value="{localDataModelContactMe>/NameFirst}" />
 <!--Last name-->
 				<Label	id="idLabelContactMeLastName"
 						text="{i18n>lblContactMeLastName}"
 						labelFor="idInputContactMeLastName"/>
 				<Input	id="idInputContactMeLastName"
 						placeholder="{i18n>PlaceholderInputContactMeLastName}" 
-						value="{localDataModel>/DataContactMe/NameLast}" />
+						value="{localDataModelContactMe>/NameLast}" />
 <!--Email-->
 				<Label	id="idLabelContactMeEmail"
 						text="{i18n>lblContactMeEmail}"
 						labelFor="idInputContactMeEmail"/>
 				<Input	id="idInputContactMeEmail"
 						placeholder="{i18n>PlaceholderInputContactMeEmail}" 
-						value="{localDataModel>/DataContactMe/Email}" />
+						value="{localDataModelContactMe>/Email}" />
 			</f:SimpleForm>
 <!--MessageText-->
-            <TextArea	width="100%" 
+            <TextArea	id="idTextAreaContactMeText"
+            			width="100%" 
             			placeholder="{i18n>PlaceholderInputContactMeTextArea}" 
-            			value="{localDataModel>/DataContactMe/Text}"
+            			value="{localDataModelContactMe>/Text}"
             			rows="15" />
 		</content>
 <!--Buttons-->

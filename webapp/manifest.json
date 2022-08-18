@@ -59,6 +59,11 @@
 				"settings": {
 					"bundleName": "Homepage.Homepage.i18n.i18n"
 				}
+			},
+			"localDataModelContactMe": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"preload": false
 			}
 		},
 		"resources": {

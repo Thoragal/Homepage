@@ -16,7 +16,6 @@ sap.ui.define([
 			//this.getView().setModel(oImgModel, "img");
 			
 			this.getView().byId("idButtonNavToHome").setType("Emphasized");
-
 		}
 	});
 });

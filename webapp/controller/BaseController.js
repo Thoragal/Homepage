@@ -4,15 +4,17 @@ sap.ui.define([
 	"sap/m/library",
 	"sap/ui/core/routing/History",
 	"sap/ui/model/json/JSONModel",
-	"sap/ui/core/syncStyleClass"
-], function (Controller, UIComponent, mobileLibrary, History, JSONModel, syncStyleClass) {
+	"sap/ui/core/syncStyleClass",
+	"sap/m/MessageBox",
+	"sap/ui/core/Fragment"
+], function (Controller, UIComponent, mobileLibrary, History, JSONModel, syncStyleClass, MessageBox, Fragment) {
 	"use strict";
 	
 	// shortcut for sap.m.URLHelper
 	//var URLHelper = mobileLibrary.URLHelper;
 
 	return Controller.extend("Homepage.Homepage.controller.BaseController", {
-		
+
 		onNavToHome: function (oEvent) {
 			this.getRouter().navTo("HomeView");
 		},
@@ -48,6 +50,72 @@ sap.ui.define([
 		
 		onPressContactMeDialogCancel: function (oEvent){
 			this.ContactMeDialog.close();
+		},
+		
+		onPressContactMeDialogOk: function (oEvent){
+			
+			if (!this._checkValidityContactMeData(oEvent)){
+				return;
+			}
+		
+			/*Send Message*/
+			//TODO: Implement Backend and Send Data
+			
+			/*Success Message*/
+			MessageBox.success(this.getResourceBundle().getText("txtMessageSendSuccess"), {
+						onClose: function (oAction) {
+							this.ContactMeDialog.close();
+						}.bind(this)
+					});
+		},
+		
+		_checkValidityContactMeData: function (oEvent){
+			var sContactMeData = this.getView().getModel("localDataModelContactMe").getData();
+			var bValid = true;
+			
+			/*Check if mandatory Data is supplied*/
+			//FirstName
+			if (sContactMeData.NameFirst === undefined || sContactMeData.NameFirst === "") {
+				bValid = false;
+				Fragment.byId("idFragContactMeDialog", "idInputContactMeFirstName").setValueState(sap.ui.core.ValueState.Error);
+				Fragment.byId("idFragContactMeDialog", "idInputContactMeFirstName").setValueStateText(this.getResourceBundle().getText("txtContactMeMandatory"));
+			} else {
+				Fragment.byId("idFragContactMeDialog", "idInputContactMeFirstName").setValueState(sap.ui.core.ValueState.None);
+				Fragment.byId("idFragContactMeDialog", "idInputContactMeFirstName").setValueStateText("");
+			}
+			
+			//LastName
+			if (sContactMeData.NameLast === undefined || sContactMeData.NameLast === "") {
+				bValid = false;
+				Fragment.byId("idFragContactMeDialog", "idInputContactMeLastName").setValueState(sap.ui.core.ValueState.Error);
+				Fragment.byId("idFragContactMeDialog", "idInputContactMeLastName").setValueStateText(this.getResourceBundle().getText("txtContactMeMandatory"));
+			} else {
+				Fragment.byId("idFragContactMeDialog", "idInputContactMeLastName").setValueState(sap.ui.core.ValueState.None);
+				Fragment.byId("idFragContactMeDialog", "idInputContactMeLastName").setValueStateText("");
+			}
+			
+			//Email
+			if (sContactMeData.Email === undefined || sContactMeData.Email === "") {
+				bValid = false;
+				Fragment.byId("idFragContactMeDialog", "idInputContactMeEmail").setValueState(sap.ui.core.ValueState.Error);
+				Fragment.byId("idFragContactMeDialog", "idInputContactMeEmail").setValueStateText(this.getResourceBundle().getText("txtContactMeMandatory"));
+			} else {
+				Fragment.byId("idFragContactMeDialog", "idInputContactMeEmail").setValueState(sap.ui.core.ValueState.None);
+				Fragment.byId("idFragContactMeDialog", "idInputContactMeEmail").setValueStateText("");
+			}
+			
+			//Text
+			if (sContactMeData.Text === undefined || sContactMeData.Text === "") {
+				bValid = false;
+				Fragment.byId("idFragContactMeDialog", "idTextAreaContactMeText").setValueState(sap.ui.core.ValueState.Error);
+				Fragment.byId("idFragContactMeDialog", "idTextAreaContactMeText").setValueStateText(this.getResourceBundle().getText("txtContactMeMandatory"));
+			} else {
+				Fragment.byId("idFragContactMeDialog", "idTextAreaContactMeText").setValueState(sap.ui.core.ValueState.None);
+				Fragment.byId("idFragContactMeDialog", "idTextAreaContactMeText").setValueStateText("");
+			}
+			
+			return bValid;
+			
 		},
 		
 		/**
