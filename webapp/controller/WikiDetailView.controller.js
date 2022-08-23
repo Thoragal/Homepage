@@ -128,37 +128,6 @@ sap.ui.define([
 			}
 			
 			return iConfirmedIndex;
-		},
-		
-		_getConfirmedIndex1: function(iIndex){
-			var oModel = this.getView().getModel("WikiModel");
-			var sPath = jQuery.sap.getModulePath("Homepage.Homepage", "/model/WikiData.json"); 
-			oModel.loadData(sPath, "", false);
-			
-			var tWikidata = oModel.getProperty("/Wiki");
-			
-			var sMessage;
-			var iConfirmedIndex;
-			
-			 if (iIndex < 0) {
-				iConfirmedIndex = (tWikidata.length - 1);
-				
-				sMessage = this.getResourceBundle().getText("WikiDetailLoadLast");
-				MessageToast.show(sMessage);
-				
-				} 
-			 else if (iIndex > (tWikidata.length - 1)) {
-			 	iConfirmedIndex = 0;
-			 	
-				sMessage = this.getResourceBundle().getText("WikiDetailLoadFirst");
-				MessageToast.show(sMessage);
-			 	
-			 }
-			 else {
-				iConfirmedIndex = iIndex;
-			 }
-			 
-			 return iConfirmedIndex;
 		}
 
 		/**

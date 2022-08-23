@@ -61,12 +61,27 @@ sap.ui.define([
 			/*Send Message*/
 			//TODO: Implement Backend and Send Data
 			
+
+			this._displayMessageContactMeSend(true);
+			
+		},
+		
+		_displayMessageContactMeSend: function(fSuccess){
+			if (fSuccess === true){
 			/*Success Message*/
-			MessageBox.success(this.getResourceBundle().getText("txtMessageSendSuccess"), {
-						onClose: function (oAction) {
+				MessageBox.success(this.getResourceBundle().getText("txtMessageSendSuccess"), {
+							onClose: function (oAction) {
 							this.ContactMeDialog.close();
 						}.bind(this)
 					});
+			}
+			else {
+			/*Error Message*/
+				MessageBox.error(this.getResourceBundle().getText("txtMessageSendError"), {
+							onClose: function (oAction) {
+						}.bind(this)
+					});
+			}
 		},
 		
 		_checkValidityContactMeData: function (oEvent){
