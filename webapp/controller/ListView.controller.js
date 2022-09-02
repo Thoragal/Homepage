@@ -14,6 +14,8 @@ sap.ui.define([
 		 * @memberOf Homepage.Homepage.view.ListView
 		 */
 		onInit: function() {
+			this.getView().byId("idPageList").setBusy(true);
+			
 			this.getView().byId("idButtonNavToList").setType("Emphasized");	
 			
 			var oTable = this.byId("IdObjectTableData");
@@ -44,6 +46,8 @@ sap.ui.define([
 				};
 				
 			this._setFilterCountValues();
+			
+			this.getView().byId("idPageList").setBusy(false);
 		},
 
 		/**

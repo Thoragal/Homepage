@@ -18,6 +18,7 @@ sap.ui.define([
 		 * @memberOf Homepage.Homepage.view.WikiDetailView
 		 */
 		onInit: function () {
+			this.getView().byId("idPageWikiDetail").setBusy(true);
 
 			this.getView().byId("idButtonNavToWiki").setType("Emphasized");	
 
@@ -28,6 +29,8 @@ sap.ui.define([
 			
 			var oRouter = this.getOwnerComponent().getRouter();
 			oRouter.getRoute("WikiDetailView").attachPatternMatched(this._onObjectMatched, this);
+			
+			this.getView().byId("idPageWikiDetail").setBusy(false);
 		},
 		
 		onNavToWikiDetailNext: function(oEvent){

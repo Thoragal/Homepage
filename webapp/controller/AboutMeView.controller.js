@@ -13,6 +13,8 @@ sap.ui.define([
 		 * @memberOf Homepage.Homepage.view.AboutMeView
 		 */
 		onInit: function () {
+			this.getView().byId("idPageAboutMe").setBusy(true);
+			
 			// set header button Emphasized
 			this.getView().byId("idButtonNavToAboutMe").setType("Emphasized");	
 			
@@ -20,6 +22,8 @@ sap.ui.define([
 			var sPath = jQuery.sap.getModulePath("Homepage.Homepage", "/model/MeData.json"); 
 			var oModel = new JSONModel(sPath);
 			this.getView().setModel(oModel, "MeModel");
+			
+			this.getView().byId("idPageAboutMe").setBusy(false);
 		},
 		
 		onXingPressed: function() {
