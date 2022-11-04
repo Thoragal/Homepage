@@ -17,7 +17,7 @@ sap.ui.define([
 		 * @memberOf Homepage.Homepage.view.WikiView
 		 */
 		onInit: function () {
-			this.getView().byId("idPageWiki").setBusy(true);
+//			this.getView().byId("idPageWiki").setBusy(true);
 			
 			this.getView().byId("idButtonNavToWiki").setType("Emphasized");	
 			
@@ -25,7 +25,7 @@ sap.ui.define([
 			var oModel = new JSONModel(sPath);
 			this.getView().setModel(oModel, "WikiModel");
 			
-			this.getView().byId("idPageWiki").setBusy(false);
+//			this.getView().byId("idPageWiki").setBusy(false);
 		},
 
 		onPressRow: function (oEvent) {

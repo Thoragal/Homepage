@@ -1,5 +1,6 @@
 sap.ui.define([
-], function () {
+	"sap/ui/Device"
+], function (Device) {
 	"use strict";
 	
 	return {
@@ -8,13 +9,11 @@ sap.ui.define([
 		},
 		device: function(value) {
 			var result = value;
-			if (value === "1111") {
-			//	result = "XXXX";
-			}
-			else {
-				result = "ABCD";
+			if( sap.ui.Device.system.phone === true ){
+				result = "";
 			}
 			return result;
+			
 		}
 	};
 });

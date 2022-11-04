@@ -6,20 +6,38 @@ sap.ui.define([
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/syncStyleClass",
 	"sap/m/MessageBox",
-	"sap/ui/core/Fragment"
-], function (Controller, UIComponent, mobileLibrary, History, JSONModel, syncStyleClass, MessageBox, Fragment) {
+	"sap/ui/core/Fragment",
+	"../model/formatter"
+], function (Controller, UIComponent, mobileLibrary, History, JSONModel, syncStyleClass, MessageBox, Fragment, formatter) {
 	"use strict";
 	
 	// shortcut for sap.m.URLHelper
 	//var URLHelper = mobileLibrary.URLHelper;
+	var gvWikiView;
 
 	return Controller.extend("Homepage.Homepage.controller.BaseController", {
+		
+		// set formatter
+    	formatter: formatter,
 
 		onNavToHome: function (oEvent) {
 			this.getRouter().navTo("HomeView");
 		},
 		onNavToWiki: function (oEvent) {
+			if (gvWikiView==="Overview") {
+				this.onNavToWikiOverview(oEvent);
+			}
+			else {
+				this.onNavToWikiStandard(oEvent);
+			}
+		},
+		onNavToWikiStandard: function (oEvent) {
+			gvWikiView="Standard";
 			this.getRouter().navTo("WikiView");
+		},
+		onNavToWikiOverview: function (oEvent) {
+			gvWikiView="Overview";
+			this.getRouter().navTo("WikiOverviewView");
 		},
 		onNavToList: function (oEvent) {
 			this.getRouter().navTo("ListView");
