@@ -1,6 +1,5 @@
 sap.ui.define([
-	"sap/ui/Device"
-], function (Device) {
+], function () {
 	"use strict";
 	
 	return {

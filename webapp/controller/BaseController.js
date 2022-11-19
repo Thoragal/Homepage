@@ -47,6 +47,12 @@ sap.ui.define([
 		},
 		
 		onNavToContactMe: function (oEvent) {
+			
+			//TODO: Test Coding
+//			var onewModel = new sap.ui.model.json.JSONModel();
+//			onewModel.loadData("https://http-nodejs.production-c8a5.up.railway.app","","false");
+//			sap.ui.core().setModel(onewModel);
+			
 			//Dialog öffnen
 			if (!this.ContactMeDialog) {
 				this.refDateDialog = sap.ui.core.Fragment.load({
