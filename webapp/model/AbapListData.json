@@ -728,6 +728,12 @@
     "description": "Pricat Eingang: Anlage Einkaufskonditionen"
   },
   {
+    "type": "Tabelle",
+    "category": "Pricat",
+    "value": "WRF_PRICAT_TRIG",
+    "description": "Preiskatalog Eingang: Triggertabelle für terminierte Daten"
+  },
+  {
     "type": "Transaktion",
     "category": "SD",
     "value": "VA01-03",
@@ -1683,6 +1689,12 @@
   },
   {
     "type": "Transaktion",
+    "category": "Sonstiges",
+    "value": "STRUST",
+    "description": "Zertifikate; Trust-Manager"
+  },
+  {
+    "type": "Transaktion",
     "category": "UI5 + Floorplan",
     "value": "/UI2/FLP",
     "description": "Fiori Launchpad"
@@ -2063,7 +2075,7 @@
     "type": "Transaktion",
     "category": "Entwicklertools",
     "value": "SE14",
-    "description": "Adjust table"
+    "description": "Adjust table; Tabelle umsetzen"
   },
   {
     "type": "Transaktion",
@@ -2105,7 +2117,13 @@
     "type": "Transaktion",
     "category": "SAP Basis",
     "value": "SM51",
-    "description": "Change Instance of SAP-Platform"
+    "description": "Change Instance of SAP-Platform; Workprozesse"
+  },
+  {
+    "type": "Transaktion",
+    "category": "SAP Basis",
+    "value": "SM66",
+    "description": "Workprozesse"
   },
   {
     "type": "Transaktion",
@@ -2216,6 +2234,18 @@
     "description": "Migration S4 ( https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/29193bf0ebdd4583930b2176cb993268/a4d4119a2cc9448a98e5d17e6dd0eac4.html )"
   },
   {
+    "type": "Transaktion",
+    "category": "Security",
+    "value": "RSAU_CONFIG",
+    "description": "Security Audit Log - Konfiguration"
+  },
+  {
+    "type": "Transaktion",
+    "category": "Security",
+    "value": "RSAU_READ_LOG",
+    "description": "Security Audit Log  - Auswertung"
+  },
+  {
     "type": "Klasse",
     "category": "Stammdaten",
     "value": "LFA1_READ_SINGLE",
@@ -2256,6 +2286,18 @@
     "category": "AMDP",
     "value": "IF_AMDP_MARKER_HDB",
     "description": "AMDP-Interface"
+  },
+  {
+    "type": "Klasse",
+    "category": "Entwicklung",
+    "value": "CL_ABAP_TSTMP",
+    "description": "Calculation with timestamp"
+  },
+  {
+    "type": "Klasse",
+    "category": "Entwicklung",
+    "value": "CL_ABAP_CONTEXT_INFO",
+    "description": "Info bzgl. Datum, User, Sprache"
   },
   {
     "type": "Fuba",
